@@ -31,9 +31,46 @@
     position: relative;
     overflow: hidden;
   }
-  @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; }
-    .hero-photo-col { display: none; }
+ @media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+  }
+
+  .hero-photo-col {
+    display: block;
+    grid-column: 1;
+    grid-row: 1 / 4;
+    position: absolute;
+    inset: 0;
+    opacity: 0.35;
+    z-index: 1;
+  }
+
+  .hero-center,
+  .hero-nav,
+  .hero-bottom {
+    z-index: 10;
+  }
+
+  .hero-trio-wrap .p-dayse {
+    height: 78%;
+    left: 55%;
+    bottom: 0;
+  }
+
+  .hero-trio-wrap .p-alvaro {
+    height: 65%;
+    left: 25%;
+    bottom: 0;
+  }
+
+  .hero-trio-wrap .p-saulo {
+    height: 65%;
+    left: 85%;
+    bottom: -30px;
+  }
+}
   }
   .hero::before {
     content: '';
