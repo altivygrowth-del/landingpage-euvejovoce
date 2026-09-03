@@ -1,27 +1,25 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vivência "Eu Vejo Você" — 31 de Julho e 01 de Agosto de 2027</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght\@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght\@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cream: #f5f0e8;
-    --warm: #e8dcc8;
-    --sage: #4a5e52;
-    --deep-sage: #2d3d35;
-    --terracotta: #b5654a;
-    --gold: #c9a96e;
-    --text: #1a1a18;
-    --muted: #6b6b60;
+    \--cream: #f5f0e8;
+    \--warm: #e8dcc8;
+    \--sage: #4a5e52;
+    \--deep-sage: #2d3d35;
+    \--terracotta: #b5654a;
+    \--gold: #c9a96e;
+    \--text: #1a1a18;
+    \--muted: #6b6b60;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
-
 /* ── HERO ── */
 .hero {
 min-height: 100vh;
@@ -41,30 +39,29 @@ radial-gradient(ellipse 50% 50% at 100% 80%, rgba(201,169,110,0.08) 0%, transpar
 pointer-events: none;
 z-index: 1;
 }
-
-/* photo column — trio /
-.hero-photo-col {
-grid-column: 2;
-grid-row: 1 / 4;
-position: relative;
-overflow: hidden;
-}
-.hero-photo-col::after {
-content: '';
-position: absolute;
-inset: 0;
-background: linear-gradient(to right, var(--deep-sage) 0%, rgba(45,61,53,0) 20%),
-linear-gradient(to top, var(--deep-sage) 0%, rgba(45,61,53,0) 10%);
-z-index: 3;
-pointer-events: none;
-}
-.hero-trio-wrap {
-position: absolute;
-bottom: 0;
-left: 0; right: 0;
-height: 100%;
-}
-/ Each person positioned absolutely, tightly grouped in center */
+/* photo column — trio */*
+*.hero-photo-col {*
+*grid-column: 2;*
+*grid-row: 1 / 4;*
+*position: relative;*
+*overflow: hidden;*
+*}*
+*.hero-photo-col::after {*
+*content: '';*
+*position: absolute;*
+*inset: 0;*
+*background: linear-gradient(to right, var(--deep-sage) 0%, rgba(45,61,53,0) 20%),*
+*linear-gradient(to top, var(--deep-sage) 0%, rgba(45,61,53,0) 10%);*
+*z-index: 3;*
+*pointer-events: none;*
+*}*
+*.hero-trio-wrap {*
+*position: absolute;*
+*bottom: 0;*
+*left: 0; right: 0;*
+*height: 100%;*
+*}*
+*/* Each person positioned absolutely, tightly grouped in center */
 .hero-trio-wrap img {
 position: absolute;
 bottom: 0;
@@ -79,7 +76,6 @@ left: 52%;
 transform: translateX(-50%);
 z-index: 2;
 }
-
 .hero-trio-wrap .p-alvaro {
 height: 100%;
 width: auto;
@@ -87,7 +83,6 @@ left: 20%;
 transform: translateX(-50%);
 z-index: 1;
 }
-
 .hero-trio-wrap .p-saulo {
 height: 110%;
 width: auto;
@@ -96,7 +91,6 @@ transform: translateX(-50%);
 bottom: -95px;
 z-index: 1;
 }
-
 .hero-nav {
 grid-column: 1;
 grid-row: 1;
@@ -109,7 +103,6 @@ z-index: 10;
 }
 .hero-tag { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); opacity: 0.9; }
 .hero-date-pill { background: rgba(201,169,110,0.15); border: 1px solid rgba(201,169,110,0.3); color: var(--gold); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.45rem 1rem; border-radius: 100px; }
-
 .hero-center {
 grid-column: 1;
 grid-row: 2;
@@ -125,12 +118,10 @@ z-index: 10;
 .hero-title em { font-style: italic; color: var(--gold); display: block; }
 .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem, 2vw, 1.35rem); font-weight: 300; font-style: italic; color: rgba(245,240,232,0.65); max-width: 440px; line-height: 1.65; margin-bottom: 2.5rem; }
 .hero-question { font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem, 1.8vw, 1.35rem); font-weight: 300; font-style: italic; color: rgba(245,240,232,0.8); max-width: 480px; line-height: 1.65; margin-bottom: 3rem; border-left: 2px solid var(--gold); padding-left: 1.5rem; }
-
 .cta-primary { display: inline-flex; align-items: center; gap: 0.75rem; background: var(--terracotta); color: #fff; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 1.1rem 2.5rem; border-radius: 3px; text-decoration: none; transition: all 0.3s ease; border: 1px solid var(--terracotta); cursor: pointer; }
 .cta-primary { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(181,101,74,0.4); }
 .cta-arrow { transition: transform 0.3s ease; }
 .cta-primary .cta-arrow { transform: translateX(4px); }
-
 .hero-bottom {
 grid-column: 1;
 grid-row: 3;
@@ -141,18 +132,15 @@ z-index: 10;
 }
 .hero-location { display: flex; align-items: center; gap: 0.6rem; color: rgba(245,240,232,0.45); font-size: 0.78rem; letter-spacing: 0.06em; }
 .dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; opacity: 0.5; }
-
 /* ── SHARED ── */
 .container { max-width: 1100px; margin: 0 auto; }
 .section-label { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 1.5rem; display: block; }
-
 /* ── HOOK ── */
 .hook { background: var(--cream); padding: 7rem 2rem; }
 .hook-inner { max-width: 860px; margin: 0 auto; text-align: center; }
 .hook-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 300; line-height: 1.2; color: var(--deep-sage); margin-bottom: 2rem; }
 .hook-title strong { font-weight: 600; font-style: italic; color: var(--terracotta); }
 .hook-body { font-family: 'Cormorant Garamond', serif; font-size: 1.28rem; font-weight: 300; line-height: 1.8; color: var(--muted); max-width: 640px; margin: 0 auto 3rem; }
-
 /* ── MODALITIES ── */
 .modalities { background: var(--deep-sage); padding: 6rem 2rem; }
 .mod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.07); margin-top: 3rem; }
@@ -161,7 +149,6 @@ z-index: 10;
 .mod-icon { font-size: 1.8rem; margin-bottom: 1rem; display: block; }
 .mod-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--gold); margin-bottom: 0.75rem; }
 .mod-desc { font-size: 0.85rem; color: rgba(245,240,232,0.6); line-height: 1.65; }
-
 /* ── DAYS ── */
 .days { background: var(--warm); padding: 6rem 2rem; }
 .days-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 3rem; }
@@ -171,12 +158,10 @@ z-index: 10;
 .day-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 1rem; }
 .day-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--deep-sage); margin-bottom: 1rem; line-height: 1.2; }
 .day-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.75; }
-
 /* ── THERAPISTS WITH PHOTOS ── */
 .therapists { background: var(--cream); padding: 6rem 2rem; }
 .therapists-intro { max-width: 720px; margin-bottom: 5rem; }
 .therapists-intro h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; color: var(--deep-sage); line-height: 1.15; margin-bottom: 1rem; }
-
 .therapist-card { display: grid; grid-template-columns: 340px 1fr; gap: 0; margin-bottom: 4px; background: var(--warm); overflow: hidden; min-height: 400px; }
 .therapist-card(even) { grid-template-columns: 1fr 340px; }
 .therapist-card(even) .therapist-photo { order: 2; }
@@ -199,13 +184,11 @@ z-index: 10;
 .therapist-bio { font-size: 0.88rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.2rem; }
 .therapist-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .tag { background: rgba(74,94,82,0.1); color: var(--sage); font-size: 0.68rem; letter-spacing: 0.06em; padding: 0.3rem 0.75rem; border-radius: 100px; border: 1px solid rgba(74,94,82,0.18); }
-
 /* ── TESTIMONIALS (VIDEO) ── */
 .testimonials { background: var(--deep-sage); padding: 7rem 2rem; }
 .testimonials-header { text-align: center; margin-bottom: 4rem; }
 .testimonials-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--cream); margin-bottom: 0.75rem; }
 .testimonials-header p { font-size: 0.88rem; color: rgba(245,240,232,0.45); max-width: 500px; margin: 0 auto; line-height: 1.65; }
-
 /* Video grid — shorts are vertical (9:16), main video horizontal */
 .video-main { max-width: 760px; margin: 0 auto 3rem; }
 .video-main-wrap {
@@ -219,7 +202,6 @@ box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 .video-main-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 6px; }
 .video-main-label { text-align: center; margin-top: 1rem; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,240,232,0.4); }
-
 /* Shorts grid */
 .shorts-label { text-align: center; margin-bottom: 2rem; }
 .shorts-label span { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); opacity: 0.7; }
@@ -232,7 +214,6 @@ margin: 0 auto;
 }
 @media (max-width: 700px) { .shorts-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .shorts-grid { grid-template-columns: 1fr; } }
-
 .short-wrap {
 position: relative;
 padding-bottom: 177.78%; /* 9:16 */
@@ -244,7 +225,6 @@ box-shadow: 0 8px 30px rgba(0,0,0,0.4);
 cursor: pointer;
 }
 .short-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px; }
-
 /* Thumbnail overlay for lazy loading */
 .short-thumb {
 position: absolute;
@@ -298,7 +278,6 @@ color: rgba(255,255,255,0.75);
 margin-top: 0.75rem;
 }
 .short-wrap.loaded .short-thumb { opacity: 0; pointer-events: none; }
-
 /* ── PRICING ── */
 .pricing { background: var(--warm); padding: 7rem 2rem; text-align: center; }
 .pricing-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 300; color: var(--deep-sage); margin-bottom: 1rem; line-height: 1.2; }
@@ -317,7 +296,6 @@ margin-top: 0.75rem;
 .price-installment { font-size: 0.85rem; color: rgba(245,240,232,0.45); margin-bottom: 2rem; }
 .cta-secondary { display: block; background: var(--terracotta); color: #fff; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 1.1rem 2rem; border-radius: 3px; text-decoration: none; text-align: center; transition: all 0.3s ease; border: none; cursor: pointer; }
 .cta-secondary { background: #c97055; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(181,101,74,0.35); }
-
 /* ── LOCATION ── */
 .location { background: var(--cream); padding: 5rem 2rem; }
 .location-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 960px; margin: 0 auto; align-items: center; }
@@ -329,23 +307,19 @@ margin-top: 0.75rem;
 .loc-text strong { display: block; color: var(--deep-sage); font-weight: 500; }
 .map-placeholder { border-radius: 6px; height: 260px; overflow: hidden; }
 .map-placeholder iframe { width: 100%; height: 100%; border: none; filter: saturate(0.7); }
-
 /* ── FOOTER CTA ── */
 .footer-cta { background: var(--deep-sage); padding: 7rem 2rem; text-align: center; position: relative; overflow: hidden; }
 .footer-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 60% at 50% 100%, rgba(201,169,110,0.1) 0%, transparent 70%); }
 .footer-cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 300; color: var(--cream); line-height: 1.05; margin-bottom: 1.5rem; position: relative; }
 .footer-cta-title em { font-style: italic; color: var(--gold); }
 .footer-cta-sub { font-size: 0.9rem; color: rgba(245,240,232,0.45); margin-bottom: 3rem; position: relative; }
-
 @keyframes pulse-border { 0%,100% { box-shadow: 0 0 0 0 rgba(181,101,74,0.4); } 50% { box-shadow: 0 0 0 10px rgba(181,101,74,0); } }
 .footer-cta .cta-primary { position: relative; animation: pulse-border 2.5s ease 1.5s infinite; }
-
 footer { background: #1a2820; padding: 2rem; text-align: center; }
 .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; flex-wrap: wrap; }
 .footer-links a { color: rgba(245,240,232,0.35); font-size: 0.75rem; letter-spacing: 0.08em; text-decoration: none; transition: color 0.2s; }
 .footer-links a { color: var(--gold); }
 .footer-copy { font-size: 0.72rem; color: rgba(245,240,232,0.2); }
-
 /* ── ANIMATIONS ── */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 .hero-eyebrow { animation: fadeUp 0.8s ease 0.2s both; }
@@ -353,10 +327,8 @@ footer { background: #1a2820; padding: 2rem; text-align: center; }
 .hero-sub      { animation: fadeUp 0.9s ease 0.6s both; }
 .hero-question { animation: fadeUp 0.9s ease 0.75s both; }
 .hero-cta-wrap { animation: fadeUp 0.9s ease 0.9s both; }
-
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
-
 /* ── AJUSTE MOBILE HERO: mantém as imagens visíveis no celular ── */
 @media (max-width: 900px) {
 .hero {
@@ -364,6 +336,7 @@ grid-template-columns: 1fr !important;
 min-height: 100vh;
 }
 
+```
 .hero-photo-col {
   display: block !important;
   position: absolute !important;
@@ -445,21 +418,18 @@ min-height: 100vh;
   flex-wrap: wrap;
   line-height: 1.5;
 }
+```
 
 }
-
 </style>
 </head>
 <body>
-
 <!-- ──────────── HERO ──────────── -->
-
 <section class="hero">
   <nav class="hero-nav">
     <span class="hero-tag">Vivência Terapêutica</span>
     <span class="hero-date-pill">31 de Julho e 01 de Agosto · 2025</span>
   </nav>
-
   <div class="hero-center">
     <p class="hero-eyebrow">Constelação Familiar · Magnetismo · Hipnoterapia</p>
     <h1 class="hero-title">Eu Vejo<br><em>Você</em></h1>
@@ -472,9 +442,7 @@ min-height: 100vh;
       <a href="#ingressos" class="cta-primary">Quero garantir minha vaga <span class="cta-arrow">→</span></a>
     </div>
   </div>
-
   <!-- TRIO DE FOTOS: Dayse esq · Álvaro centro · Saulo dir -->
-
   <div class="hero-photo-col">
     <div class="hero-trio-wrap">
       <img class="p-dayse"  src="https://euvejovoceads.com/vivencia/_assets/media/6b6190e2e9183d114420bd2eadafa3c6.png"  alt="Dayse N. Anselmo">
@@ -482,7 +450,6 @@ min-height: 100vh;
       <img class="p-saulo"  src="https://euvejovoceads.com/vivencia/_assets/media/db8a8cd354baf428b15b7298c129ca12.png"  alt="Saulo de Paula">
     </div>
   </div>
-
   <div class="hero-bottom">
     <div class="hero-location">
       <div class="dot"></div>
@@ -492,9 +459,7 @@ min-height: 100vh;
     </div>
   </div>
 </section>
-
 <!-- ──────────── HOOK ──────────── -->
-
 <section class="hook">
   <div class="hook-inner reveal">
     <span class="section-label">Por que esta vivência existe</span>
@@ -503,9 +468,7 @@ min-height: 100vh;
     <a href="#programacao" class="cta-primary" style="background: var(--sage); border-color: var(--sage);">Ver a programação completa <span class="cta-arrow">↓</span></a>
   </div>
 </section>
-
 <!-- ──────────── MODALITIES ──────────── -->
-
 <section class="modalities">
   <div class="container">
     <div class="reveal">
@@ -520,9 +483,7 @@ min-height: 100vh;
     </div>
   </div>
 </section>
-
 <!-- ──────────── DAYS ──────────── -->
-
 <section class="days" id="programacao">
   <div class="container reveal">
     <span class="section-label" style="color:var(--terracotta);">A jornada de dois dias</span>
@@ -545,9 +506,7 @@ min-height: 100vh;
     </div>
   </div>
 </section>
-
 <!-- ──────────── THERAPISTS ──────────── -->
-
 <section class="therapists" id="terapeutas">
   <div class="container">
     <div class="therapists-intro reveal">
@@ -556,7 +515,6 @@ min-height: 100vh;
       <p style="margin-top:1rem;font-size:0.9rem;color:var(--muted);line-height:1.7;">Três profissionais com trajetórias distintas, unidos por uma mesma missão: ajudar cada pessoa a enxergar a si mesma com mais consciência, leveza e verdade.</p>
     </div>
   </div>
-
   <div class="therapist-card reveal">
     <div class="therapist-photo">
       <img src="https://euvejovoceads.com/vivencia/_assets/media/6b6190e2e9183d114420bd2eadafa3c6.png" alt="Dayse N. Anselmo" loading="lazy">
@@ -572,7 +530,6 @@ min-height: 100vh;
       </div>
     </div>
   </div>
-
   <div class="therapist-card reveal">
     <div class="therapist-photo">
       <img src="https://euvejovoceads.com/vivencia/_assets/media/30c8f2075e5f92275a14f3e3f1c6de24.png" alt="Álvaro R. Krueger" loading="lazy">
@@ -588,7 +545,6 @@ min-height: 100vh;
       </div>
     </div>
   </div>
-
   <div class="therapist-card reveal">
     <div class="therapist-photo">
       <img src="https://euvejovoceads.com/vivencia/_assets/media/aa45fc8214537614c8e5dfbd3c04ce42.png" alt="Saulo de Paula" loading="lazy">
@@ -605,22 +561,19 @@ min-height: 100vh;
     </div>
   </div>
 </section>
-
 <!-- ──────────── TESTIMONIALS (VÍDEOS) ──────────── -->
-
 <section class="testimonials" id="depoimentos">
   <div class="testimonials-header reveal">
     <span class="section-label" style="color:var(--gold);display:block;text-align:center;">Quem já viveu sabe</span>
     <h2>Veja o que dizem sobre esta jornada</h2>
     <p>Depoimentos em vídeo de quem passou pelos processos dos nossos terapeutas</p>
   </div>
-
   <div class="container">
     <!-- Vídeo principal -->
     <div class="video-main reveal">
       <div class="video-main-wrap">
         <iframe
-          src="https://www.youtube-nocookie.com/embed/snW-wU5I1kI?rel=0&modestbranding=1"
+          src="https://www\.youtube-nocookie.com/embed/snW-wU5I1kI?rel=0&modestbranding=1"
           title="Vivência Eu Vejo Você"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -630,73 +583,67 @@ min-height: 100vh;
       <p class="video-main-label">✦ Assista e sinta o que esta vivência pode fazer por você</p>
     </div>
 
+```
 <!-- Shorts de depoimentos -->
 <div class="shorts-label reveal">
   <span>Depoimentos em vídeo</span>
 </div>
 <div class="shorts-grid reveal">
 
-  <!-- Short 1 -->
-  <div class="short-wrap" id="sw1">
-    <div class="short-thumb" onclick="loadShort('sw1','eRVJxqoAU6M')">
-      <img src="https://i.ytimg.com/vi/eRVJxqoAU6M/hqdefault.jpg" alt="Depoimento">
-      <div class="play-btn"><div class="play-icon"></div></div>
-      <span class="play-label">Assistir</span>
-    </div>
-  </div>
+      <!-- Short 1 -->
+      <div class="short-wrap" id="sw1">
+        <div class="short-thumb" onclick="loadShort('sw1','yMqhzao_vT0')">
+          <img src="https://i.ytimg.com/vi/yMqhzao_vT0/hqdefault.jpg" alt="Depoimento">
+          <div class="play-btn"><div class="play-icon"></div></div>
+          <span class="play-label">Assistir</span>
+        </div>
+      </div>
 
-  <!-- Short 2 -->
-  <div class="short-wrap" id="sw2">
-    <div class="short-thumb" onclick="loadShort('sw2','97B8gx7zb18')">
-      <img src="https://i.ytimg.com/vi/97B8gx7zb18/hqdefault.jpg" alt="Depoimento">
-      <div class="play-btn"><div class="play-icon"></div></div>
-      <span class="play-label">Assistir</span>
-    </div>
-  </div>
+      <!-- Short 2 -->
+      <div class="short-wrap" id="sw2">
+        <div class="short-thumb" onclick="loadShort('sw2','vzvBc_WP5pw')">
+          <img src="https://i.ytimg.com/vi/vzvBc_WP5pw/hqdefault.jpg" alt="Depoimento">
+          <div class="play-btn"><div class="play-icon"></div></div>
+          <span class="play-label">Assistir</span>
+        </div>
+      </div>
 
-  <!-- Short 3 -->
-  <div class="short-wrap" id="sw3">
-    <div class="short-thumb" onclick="loadShort('sw3','s2mjpkNsS1o')">
-      <img src="https://i.ytimg.com/vi/s2mjpkNsS1o/hqdefault.jpg" alt="Depoimento">
-      <div class="play-btn"><div class="play-icon"></div></div>
-      <span class="play-label">Assistir</span>
-    </div>
-  </div>
+      <!-- Short 3 -->
+      <div class="short-wrap" id="sw3">
+        <div class="short-thumb" onclick="loadShort('sw3','V12TU8PW-F8')">
+          <img src="https://i.ytimg.com/vi/V12TU8PW-F8/hqdefault.jpg" alt="Depoimento">
+          <div class="play-btn"><div class="play-icon"></div></div>
+          <span class="play-label">Assistir</span>
+        </div>
+      </div>
 
-  <!-- Short 4 -->
-  <div class="short-wrap" id="sw4">
-    <div class="short-thumb" onclick="loadShort('sw4','41b2Ds_DFlg')">
-      <img src="https://i.ytimg.com/vi/41b2Ds_DFlg/hqdefault.jpg" alt="Depoimento">
-      <div class="play-btn"><div class="play-icon"></div></div>
-      <span class="play-label">Assistir</span>
-    </div>
-  </div>
+      <!-- Short 4 -->
+      <div class="short-wrap" id="sw4">
+        <div class="short-thumb" onclick="loadShort('sw4','GBwpK316JGg')">
+          <img src="https://i.ytimg.com/vi/GBwpK316JGg/hqdefault.jpg" alt="Depoimento">
+          <div class="play-btn"><div class="play-icon"></div></div>
+          <span class="play-label">Assistir</span>
+        </div>
+      </div>
 
-  <!-- Short 5 -->
-  <div class="short-wrap" id="sw5">
-    <div class="short-thumb" onclick="loadShort('sw5','8Vz92w0JK7E')">
-      <img src="https://i.ytimg.com/vi/8Vz92w0JK7E/hqdefault.jpg" alt="Depoimento">
-      <div class="play-btn"><div class="play-icon"></div></div>
-      <span class="play-label">Assistir</span>
-    </div>
-  </div>
+      <!-- Short 5 -->
+      <div class="short-wrap" id="sw5">
+        <div class="short-thumb" onclick="loadShort('sw5','jybYi-DR5E4')">
+          <img src="https://i.ytimg.com/vi/jybYi-DR5E4/hqdefault.jpg" alt="Depoimento">
+          <div class="play-btn"><div class="play-icon"></div></div>
+          <span class="play-label">Assistir</span>
+        </div>
+      </div>
 
-  <!-- Short 6 -->
-  <div class="short-wrap" id="sw6">
-    <div class="short-thumb" onclick="loadShort('sw6','cUeNmq4dUVQ')">
-      <img src="https://i.ytimg.com/vi/cUeNmq4dUVQ/hqdefault.jpg" alt="Depoimento">
-      <div class="play-btn"><div class="play-icon"></div></div>
-      <span class="play-label">Assistir</span>
-    </div>
-  </div>
+      <!-- Short 6 — posição reservada -->
+      <div class="short-wrap" id="sw6"></div>
 
-</div>
+    </div>>
+```
 
   </div>
 </section>
-
 <!-- ──────────── PRICING ──────────── -->
-
 <section class="pricing" id="ingressos">
   <div class="container">
     <div class="reveal">
@@ -719,9 +666,7 @@ min-height: 100vh;
     <p class="reveal" style="color:var(--muted);font-size:0.78rem;margin-top:1.5rem;">Vagas limitadas. O preço retorna ao valor original quando o lote encerrar.</p>
   </div>
 </section>
-
 <!-- ──────────── LOCATION ──────────── -->
-
 <section class="location">
   <div class="location-inner reveal">
     <div>
@@ -733,19 +678,16 @@ min-height: 100vh;
       <div class="location-detail"><span class="loc-icon">🌐</span><div class="loc-text"><strong>institutosaulodepaula.com</strong>@vivenciaeuvejovoce</div></div>
     </div>
     <div class="map-placeholder">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.2!2d-49.5244!3d-26.2334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94de5d0d2e2a4d1b%3A0x0!2zUmlvIE5lZ3Jpbmhv!5e0!3m2!1spt-BR!2sbr!4v1680000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização"></iframe>
+      <iframe src="https://www\.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.2!2d-49.5244!3d-26.2334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94de5d0d2e2a4d1b%3A0x0!2zUmlvIE5lZ3Jpbmhv!5e0!3m2!1spt-BR!2sbr!4v1680000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização"></iframe>
     </div>
   </div>
 </section>
-
 <!-- ──────────── FOOTER CTA ──────────── -->
-
 <section class="footer-cta">
   <h2 class="footer-cta-title">A vida que você quer<br>começa quando você<br><em>decide ser visto.</em></h2>
   <p class="footer-cta-sub">Vagas limitadas · 31 e 01 de Agosto · Corupá — SC</p>
   <a href="https://euvejovoceads.com/vivencia" target="_blank" class="cta-primary">Quero viver esta experiência →</a>
 </section>
-
 <footer>
   <div class="footer-links">
     <a href="https://institutosaulodepaula.com" target="_blank">institutosaulodepaula.com</a>
@@ -755,7 +697,6 @@ min-height: 100vh;
   </div>
   <p class="footer-copy">© 2025 Vivência Eu Vejo Você · Todos os direitos reservados</p>
 </footer>
-
 <script>
   // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
@@ -773,7 +714,7 @@ min-height: 100vh;
     const wrap = document.getElementById(wrapperId);
     if (!wrap) return;
     const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+    iframe.src = \`https://www\.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1\`;
     iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
     iframe.allowFullscreen = true;
     iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:8px;';
@@ -781,6 +722,5 @@ min-height: 100vh;
     wrap.classList.add('loaded');
   }
 </script>
-
 </body>
 </html>
