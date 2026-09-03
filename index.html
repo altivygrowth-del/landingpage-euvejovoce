@@ -42,7 +42,7 @@ pointer-events: none;
 z-index: 1;
 }
 
-/* photo column — trio /
+/* photo column — trio */
 .hero-photo-col {
 grid-column: 2;
 grid-row: 1 / 4;
@@ -64,7 +64,7 @@ bottom: 0;
 left: 0; right: 0;
 height: 100%;
 }
-/ Each person positioned absolutely, tightly grouped in center */
+
 .hero-trio-wrap img {
 position: absolute;
 bottom: 0;
@@ -178,21 +178,21 @@ z-index: 10;
 .therapists-intro h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; color: var(--deep-sage); line-height: 1.15; margin-bottom: 1rem; }
 
 .therapist-card { display: grid; grid-template-columns: 340px 1fr; gap: 0; margin-bottom: 4px; background: var(--warm); overflow: hidden; min-height: 400px; }
-.therapist-card(even) { grid-template-columns: 1fr 340px; }
-.therapist-card(even) .therapist-photo { order: 2; }
-.therapist-card(even) .therapist-content { order: 1; }
+.therapist-card:nth-child(even) { grid-template-columns: 1fr 340px; }
+.therapist-card:nth-child(even) .therapist-photo { order: 2; }
+.therapist-card:nth-child(even) .therapist-content { order: 1; }
 @media (max-width: 800px) {
-.therapist-card, .therapist-card(even) { grid-template-columns: 1fr; }
-.therapist-card(even) .therapist-photo { order: 1; }
-.therapist-card(even) .therapist-content { order: 2; }
+.therapist-card, .therapist-card:nth-child(even) { grid-template-columns: 1fr; }
+.therapist-card:nth-child(even) .therapist-photo { order: 1; }
+.therapist-card:nth-child(even) .therapist-content { order: 2; }
 }
 .therapist-photo { position: relative; overflow: hidden; background: var(--sage); min-height: 360px; }
 .therapist-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform 0.6s ease; filter: saturate(0.9); }
 .therapist-card .therapist-photo img { transform: scale(1.03); }
 .therapist-photo-overlay { position: absolute; inset: 0; background: linear-gradient(to right, transparent 55%, var(--warm) 100%); pointer-events: none; }
-.therapist-card(even) .therapist-photo-overlay { background: linear-gradient(to left, transparent 55%, var(--warm) 100%); }
+.therapist-card:nth-child(even) .therapist-photo-overlay { background: linear-gradient(to left, transparent 55%, var(--warm) 100%); }
 .therapist-content { padding: 3rem 3rem 3rem 2.5rem; display: flex; flex-direction: column; justify-content: center; }
-.therapist-card(even) .therapist-content { padding: 3rem 2.5rem 3rem 3rem; }
+.therapist-card:nth-child(even) .therapist-content { padding: 3rem 2.5rem 3rem 3rem; }
 .therapist-num-badge { font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; color: var(--gold); opacity: 0.6; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
 .therapist-name { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 400; color: var(--deep-sage); margin-bottom: 0.2rem; line-height: 1.1; }
 .therapist-city { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 1.2rem; }
@@ -357,7 +357,7 @@ footer { background: #1a2820; padding: 2rem; text-align: center; }
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* ── AJUSTE MOBILE HERO: mantém as imagens visíveis no celular ── */
+/* ── AJUSTE MOBILE HERO ── */
 @media (max-width: 900px) {
 .hero {
 grid-template-columns: 1fr !important;
@@ -473,7 +473,7 @@ min-height: 100vh;
     </div>
   </div>
 
-  <!-- TRIO DE FOTOS: Dayse esq · Álvaro centro · Saulo dir -->
+  <!-- TRIO DE FOTOS -->
 
   <div class="hero-photo-col">
     <div class="hero-trio-wrap">
@@ -616,7 +616,7 @@ min-height: 100vh;
   </div>
 
   <div class="container">
-    <!-- Vídeo principal -->
+    <!-- Vídeo principal (não alterado) -->
     <div class="video-main reveal">
       <div class="video-main-wrap">
         <iframe
@@ -630,13 +630,13 @@ min-height: 100vh;
       <p class="video-main-label">✦ Assista e sinta o que esta vivência pode fazer por você</p>
     </div>
 
-<!-- Shorts de depoimentos -->
-<div class="shorts-label reveal">
-  <span>Depoimentos em vídeo</span>
-</div>
-<div class="shorts-grid reveal">
+    <!-- Shorts de depoimentos -->
+    <div class="shorts-label reveal">
+      <span>Depoimentos em vídeo</span>
+    </div>
+    <div class="shorts-grid reveal">
 
-   <!-- Short 1 -->
+      <!-- Short 1 -->
       <div class="short-wrap" id="sw1">
         <div class="short-thumb" onclick="loadShort('sw1','yMqhzao_vT0')">
           <img src="https://i.ytimg.com/vi/yMqhzao_vT0/hqdefault.jpg" alt="Depoimento">
@@ -681,16 +681,16 @@ min-height: 100vh;
         </div>
       </div>
   
-  <!-- Short 6 -->
-  <div class="short-wrap" id="sw6">
-    <div class="short-thumb" onclick="loadShort('sw6','cUeNmq4dUVQ')">
-      <img src="https://i.ytimg.com/vi/cUeNmq4dUVQ/hqdefault.jpg" alt="Depoimento">
-      <div class="play-btn"><div class="play-icon"></div></div>
-      <span class="play-label">Assistir</span>
-    </div>
-  </div>
+      <!-- Short 6 (sexto vídeo mantido) -->
+      <div class="short-wrap" id="sw6">
+        <div class="short-thumb" onclick="loadShort('sw6','cUeNmq4dUVQ')">
+          <img src="https://i.ytimg.com/vi/cUeNmq4dUVQ/hqdefault.jpg" alt="Depoimento">
+          <div class="play-btn"><div class="play-icon"></div></div>
+          <span class="play-label">Assistir</span>
+        </div>
+      </div>
 
-</div>
+    </div>
 
   </div>
 </section>
